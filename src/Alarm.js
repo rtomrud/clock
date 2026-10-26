@@ -17,7 +17,7 @@ export default class Alarm extends HTMLElement {
           if (delta > 0 && delta < new Date(this.duration)) {
             alarm.setAttribute("ringing", "");
             this.dispatchEvent(
-              new CustomEvent("ring", { bubbles: true, detail: alarm })
+              new CustomEvent("ring", { bubbles: true, detail: alarm }),
             );
             return;
           }
